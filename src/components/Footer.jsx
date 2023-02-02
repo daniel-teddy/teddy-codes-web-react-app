@@ -50,7 +50,7 @@ const Footer = () => {
             <div className="footer-widget">
               <h3>Get Access to Premium</h3>
               <div className="footer-newsletter">
-                <form name='Premium Request | Subscribe form' netlify>
+                <form name='Premium Request | Subscribe form' netlify method="post" data-netlify="true" data-netlify-honeypot="bot-field">
                   <input
                     type="email"
                     name="email-subscription"
