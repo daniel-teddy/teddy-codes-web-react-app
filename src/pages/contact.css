@@ -1,0 +1,12 @@
+.contact-form{
+    width: 40rem;
+}
+.contact-form input{
+    width: 38rem;
+    height: 3rem;
+    padding: 1.5rem;
+}
+textarea{
+    width: 38rem;
+    padding: 1.5rem;
+}
