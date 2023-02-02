@@ -143,7 +143,7 @@ const ItemsDetails = () => {
         <form
           className="flex flex-col items-center justify-center"
           name="get-this-code"
-          netlify
+          netlify netlify-honeypot="bot-field"
         >
           <div className="field flex w-full pl-4 pr-4 flex-col items-start justify-center">
             <label className="font-semibold text-xxl" htmlFor="FileName">
