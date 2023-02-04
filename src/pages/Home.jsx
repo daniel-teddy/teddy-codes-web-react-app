@@ -19,7 +19,7 @@ const Home = () => {
 
           <div className="row">
             <div className="col-md-8">
-              <div className="row hide">
+              <div className="row ">
                 <Col12 />
               </div>
             </div>
