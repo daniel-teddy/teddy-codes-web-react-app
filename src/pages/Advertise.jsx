@@ -20,7 +20,7 @@ function Advertise() {
           work with you.
         </div>
       </div>
-      <form name='Advertise' className="contact-form flex flex-col mb-8 p-6 bg-slate-100 justify-center items-center" netlify>
+      <form name='Advertise' className="contact-form flex flex-col mb-8 p-6 bg-slate-100 justify-center items-center">
       <div className="flex flex-col mb-8 p-6  bg-slate-100 justify-center items-start">
         <div className="mb-6 flex flex-col items-start gap-1 justify-center">
           <label htmlFor="">Name</label>
