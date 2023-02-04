@@ -1,6 +1,16 @@
 import React from "react";
 import "./contact.css";
+
+//get formspree forms
+import { useForm, ValidationError } from '@formspree/react';
+
+
+
 function Contact() {
+  const [state, handleSubmit] = useForm("mwkjvdnn");
+  if (state.succeeded) {
+      return <p>Thanks for joining!</p>;
+  }
   return (
     <div className="mt-8 p-8 flex flex-col items-center justify-center">
       <div className="">
@@ -23,7 +33,7 @@ function Contact() {
           hearing from you.
         </div>
       </div>
-      <form className="contact-form flex flex-col mb-8 p-6 bg-slate-100 justify-center items-center">
+      <form onSubmit={handleSubmit} method="POST" action="https://formspree.io/f/mwkjvdnn" className="contact-form flex flex-col mb-8 p-6 bg-slate-100 justify-center items-center" >
       <div className="flex flex-col mb-8 p-6  bg-slate-100 justify-center items-start">
         <div className="mb-6 flex flex-col items-start gap-1 justify-center">
           <label htmlFor="">Name</label>
@@ -32,6 +42,11 @@ function Contact() {
         <div className="mb-6 flex flex-col items-start gap-1 justify-center">
           <label htmlFor="">Email*</label>
           <input type="text" name="" id="" required className="rounded-lg" placeholder="Enter your Email" />
+          <ValidationError 
+        prefix="Email" 
+        field="email"
+        errors={state.errors}
+      />
         </div>
         <div className="mb-6 flex flex-col items-start gap-1 justify-center">
           <label htmlFor="">Subject*</label>
@@ -40,9 +55,14 @@ function Contact() {
         <div className="mb-6 flex flex-col items-start gap-1 justify-center">
           <label htmlFor="">Message*</label>
           <textarea name="" className="rounded-lg" id="" cols="30" rows="7"></textarea>
+          <ValidationError 
+        prefix="Message" 
+        field="message"
+        errors={state.errors}
+      />
         </div>
         <div className="flex justify-center p-3 bg-slate-800 text-slate-100 rounded">
-          <button type="submit" className="flex items-center justify-center">
+          <button disabled={state.submitting} type="submit" className="flex items-center justify-center">
             SEND MESSAGE
           </button>
         </div>
