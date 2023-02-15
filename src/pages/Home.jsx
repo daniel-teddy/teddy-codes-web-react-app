@@ -30,9 +30,22 @@ const Home = () => {
 
                 <div className="aside-widget text-center">
                 {/* advertisement section */}
-                <a className="aaa" href="https://advertiser.website">
+              {/* <a className="aaa" href="https://advertiser.website">
                   <img src={Advertisement} alt="" />
-                </a>
+                </a> */}
+              <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8771958730239317"
+     crossorigin="anonymous"></script>
+<!-- advertise here react -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8771958730239317"
+     data-ad-slot="6883272811"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
               </div>
               </div>
               
